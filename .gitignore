@@ -54,10 +54,6 @@ Thumbs.db
 *.sln
 *.sw?
 
-# ── Explicitly TRACK the model directories needed by CI ──────────────────────
-# The top-level models/ package (models/train.py, models/__init__.py …)
-!models/
-!models/**
 
 # The cropres Python source models sub-package
 !src/

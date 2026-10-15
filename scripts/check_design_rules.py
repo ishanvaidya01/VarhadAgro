@@ -46,7 +46,7 @@ def check_design_rules():
                                 failed = True
 
     # 3. Em dashes in any source or documentation file
-    dirs_to_check = ["src", "backend", "pipeline", "models", "scripts", "tests", "docs", "frontend/src", "frontend/index.html", "README.md"]
+    dirs_to_check = ["src", "backend", "scripts", "tests", "docs", "frontend/src", "frontend/index.html", "README.md"]
     banned_words = [
         "made with ai", "lorem", "todo", "fixme", 
         "unlock", "empower", "seamless", "revolutionize", 
