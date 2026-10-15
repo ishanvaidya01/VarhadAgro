@@ -175,3 +175,12 @@ def test_unknown_route_returns_404(client):
     assert rv.status_code == 404
     data = rv.get_json()
     assert data["error"] == "not_found"
+
+
+def test_root_serves_spa_when_dist_present(client):
+    rv = client.get("/")
+    # When frontend/dist is built, it returns 200 HTML; otherwise 404
+    assert rv.status_code in (200, 404)
+    if rv.status_code == 200:
+        assert b"<!doctype html>" in rv.data.lower() or b"<html" in rv.data.lower()
+

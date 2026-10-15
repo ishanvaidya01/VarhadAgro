@@ -1,7 +1,7 @@
 import os
 import logging
 from typing import Any
-from flask import Flask, request, jsonify, Blueprint
+from flask import Flask, request, jsonify, Blueprint, send_from_directory
 from flask_cors import CORS
 from pydantic import ValidationError
 
@@ -212,6 +212,22 @@ def create_app(config: dict = None) -> Flask:
     CORS(app, resources={r"/api/*": {"origins": cors_origin}})
 
     app.register_blueprint(api_bp)
+
+    dist_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..", "frontend", "dist"))
+
+    @app.route("/", defaults={"path": ""})
+    @app.route("/<path:path>")
+    def serve_spa(path):
+        if path.startswith("api/"):
+            return structured_error("not_found", "The requested API endpoint was not found.", status_code=404)
+        if os.path.exists(dist_dir):
+            target_path = os.path.join(dist_dir, path)
+            if path and os.path.exists(target_path) and os.path.isfile(target_path):
+                return send_from_directory(dist_dir, path)
+            index_path = os.path.join(dist_dir, "index.html")
+            if os.path.exists(index_path):
+                return send_from_directory(dist_dir, "index.html")
+        return structured_error("not_found", "The requested API endpoint was not found.", status_code=404)
 
     @app.errorhandler(404)
     def handle_404(e):
