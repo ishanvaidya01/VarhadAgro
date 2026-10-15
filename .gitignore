@@ -69,3 +69,7 @@ Thumbs.db
 !artifacts/
 !artifacts/models/
 !artifacts/models/**
+
+# Re-ignore pycache inside unignored source folders
+**/__pycache__/
+*.py[cod]

@@ -1,0 +1,2 @@
+# Ensure LightGBM text model files retain Unix LF line endings
+artifacts/models/*.txt text eol=lf
