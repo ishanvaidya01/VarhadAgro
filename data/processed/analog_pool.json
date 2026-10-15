@@ -1,0 +1,740 @@
+[
+  {
+    "district": "Akola",
+    "subregion": "West Vidarbha",
+    "state": "Maharashtra",
+    "climate_vector": {
+      "season_rainfall_mm": 745.0,
+      "rainfall_cv": 0.24,
+      "tmax_mean_c": 33.5,
+      "heat_days_38": 18.0
+    },
+    "dominant_crops": [
+      {
+        "crop": "Soybean",
+        "area_1000ha": 394.9,
+        "area_share_pct": 40.5
+      },
+      {
+        "crop": "Cotton",
+        "area_1000ha": 213.3,
+        "area_share_pct": 21.9
+      },
+      {
+        "crop": "Chickpea",
+        "area_1000ha": 137.8,
+        "area_share_pct": 14.1
+      },
+      {
+        "crop": "Pigeonpea",
+        "area_1000ha": 110.0,
+        "area_share_pct": 11.3
+      }
+    ]
+  },
+  {
+    "district": "Amravati",
+    "subregion": "West Vidarbha",
+    "state": "Maharashtra",
+    "climate_vector": {
+      "season_rainfall_mm": 810.0,
+      "rainfall_cv": 0.22,
+      "tmax_mean_c": 32.8,
+      "heat_days_38": 15.0
+    },
+    "dominant_crops": [
+      {
+        "crop": "Soybean",
+        "area_1000ha": 308.2,
+        "area_share_pct": 38.1
+      },
+      {
+        "crop": "Cotton",
+        "area_1000ha": 195.6,
+        "area_share_pct": 24.2
+      },
+      {
+        "crop": "Pigeonpea",
+        "area_1000ha": 106.4,
+        "area_share_pct": 13.2
+      },
+      {
+        "crop": "Chickpea",
+        "area_1000ha": 94.3,
+        "area_share_pct": 11.7
+      }
+    ]
+  },
+  {
+    "district": "Buldhana",
+    "subregion": "West Vidarbha",
+    "state": "Maharashtra",
+    "climate_vector": {
+      "season_rainfall_mm": 680.0,
+      "rainfall_cv": 0.26,
+      "tmax_mean_c": 33.1,
+      "heat_days_38": 16.0
+    },
+    "dominant_crops": [
+      {
+        "crop": "Soybean",
+        "area_1000ha": 269.7,
+        "area_share_pct": 36.3
+      },
+      {
+        "crop": "Cotton",
+        "area_1000ha": 219.0,
+        "area_share_pct": 29.5
+      },
+      {
+        "crop": "Chickpea",
+        "area_1000ha": 68.7,
+        "area_share_pct": 9.2
+      },
+      {
+        "crop": "Pigeonpea",
+        "area_1000ha": 66.7,
+        "area_share_pct": 9.0
+      }
+    ]
+  },
+  {
+    "district": "Yavatmal",
+    "subregion": "South Vidarbha",
+    "state": "Maharashtra",
+    "climate_vector": {
+      "season_rainfall_mm": 890.0,
+      "rainfall_cv": 0.21,
+      "tmax_mean_c": 33.2,
+      "heat_days_38": 17.0
+    },
+    "dominant_crops": [
+      {
+        "crop": "Cotton",
+        "area_1000ha": 424.2,
+        "area_share_pct": 43.1
+      },
+      {
+        "crop": "Soybean",
+        "area_1000ha": 263.1,
+        "area_share_pct": 26.8
+      },
+      {
+        "crop": "Pigeonpea",
+        "area_1000ha": 119.4,
+        "area_share_pct": 12.1
+      },
+      {
+        "crop": "Sorghum",
+        "area_1000ha": 63.3,
+        "area_share_pct": 6.4
+      }
+    ]
+  },
+  {
+    "district": "Wardha",
+    "subregion": "Central Vidarbha",
+    "state": "Maharashtra",
+    "climate_vector": {
+      "season_rainfall_mm": 930.0,
+      "rainfall_cv": 0.2,
+      "tmax_mean_c": 33.0,
+      "heat_days_38": 16.0
+    },
+    "dominant_crops": [
+      {
+        "crop": "Soybean",
+        "area_1000ha": 178.0,
+        "area_share_pct": 37.6
+      },
+      {
+        "crop": "Cotton",
+        "area_1000ha": 161.5,
+        "area_share_pct": 34.1
+      },
+      {
+        "crop": "Pigeonpea",
+        "area_1000ha": 69.8,
+        "area_share_pct": 14.7
+      },
+      {
+        "crop": "Chickpea",
+        "area_1000ha": 29.3,
+        "area_share_pct": 6.2
+      }
+    ]
+  },
+  {
+    "district": "Nagpur",
+    "subregion": "East Vidarbha",
+    "state": "Maharashtra",
+    "climate_vector": {
+      "season_rainfall_mm": 985.0,
+      "rainfall_cv": 0.21,
+      "tmax_mean_c": 32.7,
+      "heat_days_38": 14.0
+    },
+    "dominant_crops": [
+      {
+        "crop": "Soybean",
+        "area_1000ha": 236.2,
+        "area_share_pct": 37.6
+      },
+      {
+        "crop": "Cotton",
+        "area_1000ha": 92.0,
+        "area_share_pct": 14.6
+      },
+      {
+        "crop": "Wheat",
+        "area_1000ha": 80.9,
+        "area_share_pct": 12.9
+      },
+      {
+        "crop": "Rice",
+        "area_1000ha": 70.5,
+        "area_share_pct": 11.2
+      }
+    ]
+  },
+  {
+    "district": "Bhandara",
+    "subregion": "East Vidarbha",
+    "state": "Maharashtra",
+    "climate_vector": {
+      "season_rainfall_mm": 1250.0,
+      "rainfall_cv": 0.22,
+      "tmax_mean_c": 32.5,
+      "heat_days_38": 12.0
+    },
+    "dominant_crops": [
+      {
+        "crop": "Rice",
+        "area_1000ha": 371.2,
+        "area_share_pct": 87.3
+      },
+      {
+        "crop": "Pigeonpea",
+        "area_1000ha": 15.5,
+        "area_share_pct": 3.6
+      },
+      {
+        "crop": "Wheat",
+        "area_1000ha": 13.7,
+        "area_share_pct": 3.2
+      },
+      {
+        "crop": "Chickpea",
+        "area_1000ha": 13.6,
+        "area_share_pct": 3.2
+      }
+    ]
+  },
+  {
+    "district": "Chandrapur",
+    "subregion": "East Vidarbha",
+    "state": "Maharashtra",
+    "climate_vector": {
+      "season_rainfall_mm": 1180.0,
+      "rainfall_cv": 0.23,
+      "tmax_mean_c": 33.8,
+      "heat_days_38": 19.0
+    },
+    "dominant_crops": [
+      {
+        "crop": "Rice",
+        "area_1000ha": 296.8,
+        "area_share_pct": 45.1
+      },
+      {
+        "crop": "Soybean",
+        "area_1000ha": 147.4,
+        "area_share_pct": 22.4
+      },
+      {
+        "crop": "Cotton",
+        "area_1000ha": 100.4,
+        "area_share_pct": 15.2
+      },
+      {
+        "crop": "Pigeonpea",
+        "area_1000ha": 38.2,
+        "area_share_pct": 5.8
+      }
+    ]
+  },
+  {
+    "district": "Jalgaon",
+    "subregion": "Khandesh",
+    "state": "Maharashtra",
+    "climate_vector": {
+      "season_rainfall_mm": 650.0,
+      "rainfall_cv": 0.28,
+      "tmax_mean_c": 34.0,
+      "heat_days_38": 22.0
+    },
+    "dominant_crops": [
+      {
+        "crop": "Cotton",
+        "area_1000ha": 477.3,
+        "area_share_pct": 61.4
+      },
+      {
+        "crop": "Sorghum",
+        "area_1000ha": 116.6,
+        "area_share_pct": 15.0
+      },
+      {
+        "crop": "Chickpea",
+        "area_1000ha": 49.4,
+        "area_share_pct": 6.4
+      },
+      {
+        "crop": "Wheat",
+        "area_1000ha": 43.1,
+        "area_share_pct": 5.5
+      }
+    ]
+  },
+  {
+    "district": "Dhule",
+    "subregion": "Khandesh",
+    "state": "Maharashtra",
+    "climate_vector": {
+      "season_rainfall_mm": 590.0,
+      "rainfall_cv": 0.31,
+      "tmax_mean_c": 34.2,
+      "heat_days_38": 24.0
+    },
+    "dominant_crops": [
+      {
+        "crop": "Cotton",
+        "area_1000ha": 223.7,
+        "area_share_pct": 32.8
+      },
+      {
+        "crop": "Bajra",
+        "area_1000ha": 121.3,
+        "area_share_pct": 17.8
+      },
+      {
+        "crop": "Sorghum",
+        "area_1000ha": 85.3,
+        "area_share_pct": 12.5
+      },
+      {
+        "crop": "Wheat",
+        "area_1000ha": 54.0,
+        "area_share_pct": 7.9
+      }
+    ]
+  },
+  {
+    "district": "Aurangabad",
+    "subregion": "Marathwada",
+    "state": "Maharashtra",
+    "climate_vector": {
+      "season_rainfall_mm": 625.0,
+      "rainfall_cv": 0.29,
+      "tmax_mean_c": 32.5,
+      "heat_days_38": 14.0
+    },
+    "dominant_crops": [
+      {
+        "crop": "Cotton",
+        "area_1000ha": 647.1,
+        "area_share_pct": 46.8
+      },
+      {
+        "crop": "Sorghum",
+        "area_1000ha": 255.4,
+        "area_share_pct": 18.5
+      },
+      {
+        "crop": "Bajra",
+        "area_1000ha": 117.5,
+        "area_share_pct": 8.5
+      },
+      {
+        "crop": "Pigeonpea",
+        "area_1000ha": 92.1,
+        "area_share_pct": 6.7
+      }
+    ]
+  },
+  {
+    "district": "Jalna",
+    "subregion": "Marathwada",
+    "state": "Maharashtra",
+    "climate_vector": {
+      "season_rainfall_mm": 640.0,
+      "rainfall_cv": 0.28,
+      "tmax_mean_c": 32.7,
+      "heat_days_38": 15.0
+    },
+    "dominant_crops": []
+  },
+  {
+    "district": "Parbhani",
+    "subregion": "Marathwada",
+    "state": "Maharashtra",
+    "climate_vector": {
+      "season_rainfall_mm": 780.0,
+      "rainfall_cv": 0.25,
+      "tmax_mean_c": 33.4,
+      "heat_days_38": 17.0
+    },
+    "dominant_crops": [
+      {
+        "crop": "Cotton",
+        "area_1000ha": 308.8,
+        "area_share_pct": 25.2
+      },
+      {
+        "crop": "Sorghum",
+        "area_1000ha": 308.4,
+        "area_share_pct": 25.2
+      },
+      {
+        "crop": "Soybean",
+        "area_1000ha": 277.8,
+        "area_share_pct": 22.7
+      },
+      {
+        "crop": "Chickpea",
+        "area_1000ha": 110.9,
+        "area_share_pct": 9.0
+      }
+    ]
+  },
+  {
+    "district": "Nanded",
+    "subregion": "Marathwada",
+    "state": "Maharashtra",
+    "climate_vector": {
+      "season_rainfall_mm": 860.0,
+      "rainfall_cv": 0.23,
+      "tmax_mean_c": 33.6,
+      "heat_days_38": 18.0
+    },
+    "dominant_crops": [
+      {
+        "crop": "Cotton",
+        "area_1000ha": 293.3,
+        "area_share_pct": 34.8
+      },
+      {
+        "crop": "Soybean",
+        "area_1000ha": 205.5,
+        "area_share_pct": 24.4
+      },
+      {
+        "crop": "Sorghum",
+        "area_1000ha": 150.3,
+        "area_share_pct": 17.8
+      },
+      {
+        "crop": "Pigeonpea",
+        "area_1000ha": 67.0,
+        "area_share_pct": 8.0
+      }
+    ]
+  },
+  {
+    "district": "Beed",
+    "subregion": "Marathwada",
+    "state": "Maharashtra",
+    "climate_vector": {
+      "season_rainfall_mm": 610.0,
+      "rainfall_cv": 0.32,
+      "tmax_mean_c": 33.0,
+      "heat_days_38": 16.0
+    },
+    "dominant_crops": [
+      {
+        "crop": "Sorghum",
+        "area_1000ha": 302.2,
+        "area_share_pct": 29.0
+      },
+      {
+        "crop": "Cotton",
+        "area_1000ha": 275.5,
+        "area_share_pct": 26.4
+      },
+      {
+        "crop": "Bajra",
+        "area_1000ha": 139.7,
+        "area_share_pct": 13.4
+      },
+      {
+        "crop": "Soybean",
+        "area_1000ha": 91.6,
+        "area_share_pct": 8.8
+      }
+    ]
+  },
+  {
+    "district": "Osmanabad",
+    "subregion": "Marathwada",
+    "state": "Maharashtra",
+    "climate_vector": {
+      "season_rainfall_mm": 690.0,
+      "rainfall_cv": 0.27,
+      "tmax_mean_c": 32.2,
+      "heat_days_38": 12.0
+    },
+    "dominant_crops": [
+      {
+        "crop": "Sorghum",
+        "area_1000ha": 412.1,
+        "area_share_pct": 31.3
+      },
+      {
+        "crop": "Soybean",
+        "area_1000ha": 340.9,
+        "area_share_pct": 25.9
+      },
+      {
+        "crop": "Pigeonpea",
+        "area_1000ha": 182.2,
+        "area_share_pct": 13.8
+      },
+      {
+        "crop": "Chickpea",
+        "area_1000ha": 165.8,
+        "area_share_pct": 12.6
+      }
+    ]
+  },
+  {
+    "district": "Solapur",
+    "subregion": "Western Maharashtra",
+    "state": "Maharashtra",
+    "climate_vector": {
+      "season_rainfall_mm": 540.0,
+      "rainfall_cv": 0.35,
+      "tmax_mean_c": 33.9,
+      "heat_days_38": 20.0
+    },
+    "dominant_crops": [
+      {
+        "crop": "Sorghum",
+        "area_1000ha": 623.8,
+        "area_share_pct": 68.2
+      },
+      {
+        "crop": "Sugarcane",
+        "area_1000ha": 134.5,
+        "area_share_pct": 14.7
+      },
+      {
+        "crop": "Wheat",
+        "area_1000ha": 56.8,
+        "area_share_pct": 6.2
+      },
+      {
+        "crop": "Chickpea",
+        "area_1000ha": 43.9,
+        "area_share_pct": 4.8
+      }
+    ]
+  },
+  {
+    "district": "Ahmednagar",
+    "subregion": "Western Maharashtra",
+    "state": "Maharashtra",
+    "climate_vector": {
+      "season_rainfall_mm": 480.0,
+      "rainfall_cv": 0.36,
+      "tmax_mean_c": 32.4,
+      "heat_days_38": 13.0
+    },
+    "dominant_crops": [
+      {
+        "crop": "Sorghum",
+        "area_1000ha": 500.4,
+        "area_share_pct": 43.7
+      },
+      {
+        "crop": "Bajra",
+        "area_1000ha": 177.7,
+        "area_share_pct": 15.5
+      },
+      {
+        "crop": "Chickpea",
+        "area_1000ha": 108.0,
+        "area_share_pct": 9.4
+      },
+      {
+        "crop": "Sugarcane",
+        "area_1000ha": 101.4,
+        "area_share_pct": 8.8
+      }
+    ]
+  },
+  {
+    "district": "Pune",
+    "subregion": "Western Maharashtra",
+    "state": "Maharashtra",
+    "climate_vector": {
+      "season_rainfall_mm": 620.0,
+      "rainfall_cv": 0.3,
+      "tmax_mean_c": 30.5,
+      "heat_days_38": 5.0
+    },
+    "dominant_crops": [
+      {
+        "crop": "Sorghum",
+        "area_1000ha": 331.3,
+        "area_share_pct": 45.1
+      },
+      {
+        "crop": "Sugarcane",
+        "area_1000ha": 107.4,
+        "area_share_pct": 14.6
+      },
+      {
+        "crop": "Rice",
+        "area_1000ha": 64.6,
+        "area_share_pct": 8.8
+      },
+      {
+        "crop": "Wheat",
+        "area_1000ha": 64.3,
+        "area_share_pct": 8.7
+      }
+    ]
+  },
+  {
+    "district": "Satara",
+    "subregion": "Western Maharashtra",
+    "state": "Maharashtra",
+    "climate_vector": {
+      "season_rainfall_mm": 720.0,
+      "rainfall_cv": 0.28,
+      "tmax_mean_c": 30.8,
+      "heat_days_38": 6.0
+    },
+    "dominant_crops": [
+      {
+        "crop": "Sorghum",
+        "area_1000ha": 177.0,
+        "area_share_pct": 34.8
+      },
+      {
+        "crop": "Sugarcane",
+        "area_1000ha": 60.6,
+        "area_share_pct": 11.9
+      },
+      {
+        "crop": "Bajra",
+        "area_1000ha": 56.8,
+        "area_share_pct": 11.2
+      },
+      {
+        "crop": "Groundnut",
+        "area_1000ha": 49.6,
+        "area_share_pct": 9.7
+      }
+    ]
+  },
+  {
+    "district": "Sangli",
+    "subregion": "Western Maharashtra",
+    "state": "Maharashtra",
+    "climate_vector": {
+      "season_rainfall_mm": 510.0,
+      "rainfall_cv": 0.33,
+      "tmax_mean_c": 31.9,
+      "heat_days_38": 10.0
+    },
+    "dominant_crops": [
+      {
+        "crop": "Sorghum",
+        "area_1000ha": 238.8,
+        "area_share_pct": 45.1
+      },
+      {
+        "crop": "Sugarcane",
+        "area_1000ha": 65.7,
+        "area_share_pct": 12.4
+      },
+      {
+        "crop": "Soybean",
+        "area_1000ha": 58.0,
+        "area_share_pct": 10.9
+      },
+      {
+        "crop": "Bajra",
+        "area_1000ha": 53.5,
+        "area_share_pct": 10.1
+      }
+    ]
+  },
+  {
+    "district": "Kolhapur",
+    "subregion": "Western Maharashtra",
+    "state": "Maharashtra",
+    "climate_vector": {
+      "season_rainfall_mm": 980.0,
+      "rainfall_cv": 0.25,
+      "tmax_mean_c": 29.8,
+      "heat_days_38": 3.0
+    },
+    "dominant_crops": [
+      {
+        "crop": "Sugarcane",
+        "area_1000ha": 127.8,
+        "area_share_pct": 32.7
+      },
+      {
+        "crop": "Rice",
+        "area_1000ha": 111.0,
+        "area_share_pct": 28.4
+      },
+      {
+        "crop": "Groundnut",
+        "area_1000ha": 57.0,
+        "area_share_pct": 14.6
+      },
+      {
+        "crop": "Soybean",
+        "area_1000ha": 55.3,
+        "area_share_pct": 14.1
+      }
+    ]
+  },
+  {
+    "district": "Nasik",
+    "subregion": "North Maharashtra",
+    "state": "Maharashtra",
+    "climate_vector": {
+      "season_rainfall_mm": 710.0,
+      "rainfall_cv": 0.27,
+      "tmax_mean_c": 31.0,
+      "heat_days_38": 7.0
+    },
+    "dominant_crops": [
+      {
+        "crop": "Bajra",
+        "area_1000ha": 182.3,
+        "area_share_pct": 34.7
+      },
+      {
+        "crop": "Wheat",
+        "area_1000ha": 71.4,
+        "area_share_pct": 13.6
+      },
+      {
+        "crop": "Rice",
+        "area_1000ha": 61.3,
+        "area_share_pct": 11.7
+      },
+      {
+        "crop": "Soybean",
+        "area_1000ha": 51.2,
+        "area_share_pct": 9.7
+      }
+    ]
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "target_coverage": 0.9,
+  "global_correction": 0.0629,
+  "crop_corrections": {
+    "Chickpea": 0.0,
+    "Cotton": 0.48040360107469415,
+    "Pigeonpea": 0.0,
+    "Rice": 0.07432790400483091,
+    "Sorghum": 0.09845738314540958,
+    "Soybean": 0.11824600917390707,
+    "Wheat": 0.0696098414075825
+  },
+  "n_calibration_samples": 269
+}

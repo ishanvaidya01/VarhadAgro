@@ -1,0 +1,531 @@
+{
+  "total_records": 1870,
+  "crops": [
+    "Cotton",
+    "Pigeon Pea",
+    "Sorghum",
+    "Soybean",
+    "Wheat"
+  ],
+  "regions": [
+    "Akola",
+    "Amravati",
+    "Bhandara",
+    "Buldhana",
+    "Chandrapur",
+    "Gadchiroli",
+    "Gondia",
+    "Nagpur",
+    "Wardha",
+    "Washim",
+    "Yavatmal"
+  ],
+  "missing_data_summary": {
+    "crop": 0.0,
+    "region": 0.0,
+    "year": 0.0,
+    "yield_t_ha": 0.0,
+    "t2m_avg": 0.0,
+    "precip_mm": 0.0,
+    "extreme_heat_days": 0.0,
+    "data_source": 0.0
+  },
+  "validation_errors": 0,
+  "coverage": [
+    {
+      "region": "Akola",
+      "crop": "Cotton",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Akola",
+      "crop": "Pigeon Pea",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Akola",
+      "crop": "Sorghum",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Akola",
+      "crop": "Soybean",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 6
+    },
+    {
+      "region": "Akola",
+      "crop": "Wheat",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Amravati",
+      "crop": "Cotton",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Amravati",
+      "crop": "Pigeon Pea",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Amravati",
+      "crop": "Sorghum",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 5
+    },
+    {
+      "region": "Amravati",
+      "crop": "Soybean",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Amravati",
+      "crop": "Wheat",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Bhandara",
+      "crop": "Cotton",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Bhandara",
+      "crop": "Pigeon Pea",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Bhandara",
+      "crop": "Sorghum",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Bhandara",
+      "crop": "Soybean",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Bhandara",
+      "crop": "Wheat",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Buldhana",
+      "crop": "Cotton",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 4
+    },
+    {
+      "region": "Buldhana",
+      "crop": "Pigeon Pea",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Buldhana",
+      "crop": "Sorghum",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 4
+    },
+    {
+      "region": "Buldhana",
+      "crop": "Soybean",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Buldhana",
+      "crop": "Wheat",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Chandrapur",
+      "crop": "Cotton",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 4
+    },
+    {
+      "region": "Chandrapur",
+      "crop": "Pigeon Pea",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 5
+    },
+    {
+      "region": "Chandrapur",
+      "crop": "Sorghum",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 4
+    },
+    {
+      "region": "Chandrapur",
+      "crop": "Soybean",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 4
+    },
+    {
+      "region": "Chandrapur",
+      "crop": "Wheat",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Gadchiroli",
+      "crop": "Cotton",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 4
+    },
+    {
+      "region": "Gadchiroli",
+      "crop": "Pigeon Pea",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 4
+    },
+    {
+      "region": "Gadchiroli",
+      "crop": "Sorghum",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 4
+    },
+    {
+      "region": "Gadchiroli",
+      "crop": "Soybean",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 6
+    },
+    {
+      "region": "Gadchiroli",
+      "crop": "Wheat",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Gondia",
+      "crop": "Cotton",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 4
+    },
+    {
+      "region": "Gondia",
+      "crop": "Pigeon Pea",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Gondia",
+      "crop": "Sorghum",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 4
+    },
+    {
+      "region": "Gondia",
+      "crop": "Soybean",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 5
+    },
+    {
+      "region": "Gondia",
+      "crop": "Wheat",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Nagpur",
+      "crop": "Cotton",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Nagpur",
+      "crop": "Pigeon Pea",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 4
+    },
+    {
+      "region": "Nagpur",
+      "crop": "Sorghum",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Nagpur",
+      "crop": "Soybean",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Nagpur",
+      "crop": "Wheat",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Wardha",
+      "crop": "Cotton",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Wardha",
+      "crop": "Pigeon Pea",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Wardha",
+      "crop": "Sorghum",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Wardha",
+      "crop": "Soybean",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Wardha",
+      "crop": "Wheat",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Washim",
+      "crop": "Cotton",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 6
+    },
+    {
+      "region": "Washim",
+      "crop": "Pigeon Pea",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 4
+    },
+    {
+      "region": "Washim",
+      "crop": "Sorghum",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 4
+    },
+    {
+      "region": "Washim",
+      "crop": "Soybean",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 5
+    },
+    {
+      "region": "Washim",
+      "crop": "Wheat",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Yavatmal",
+      "crop": "Cotton",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Yavatmal",
+      "crop": "Pigeon Pea",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    },
+    {
+      "region": "Yavatmal",
+      "crop": "Sorghum",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 4
+    },
+    {
+      "region": "Yavatmal",
+      "crop": "Soybean",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 4
+    },
+    {
+      "region": "Yavatmal",
+      "crop": "Wheat",
+      "years_available": 34,
+      "start_year": 1990,
+      "end_year": 2023,
+      "missing_pct": 0.0,
+      "downside_events": 3
+    }
+  ]
+}

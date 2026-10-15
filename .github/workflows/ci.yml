@@ -1,0 +1,60 @@
+name: VarhadCrop CI
+
+on:
+  push:
+    branches: [ main, rebuild/real-data ]
+  pull_request:
+    branches: [ main, rebuild/real-data ]
+
+jobs:
+  backend-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install Python Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install -e .
+
+      - name: Verify Design Rules
+        run: |
+          python scripts/check_design_rules.py
+
+      - name: Run Backend Unit and Integration Tests
+        run: |
+          pytest -v
+
+  frontend-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install Frontend Dependencies
+        working-directory: frontend
+        run: |
+          npm ci
+
+      - name: Frontend Linter (Oxlint)
+        working-directory: frontend
+        run: |
+          npm run lint
+
+      - name: TypeScript Type-check and Production Build
+        working-directory: frontend
+        run: |
+          npm run build

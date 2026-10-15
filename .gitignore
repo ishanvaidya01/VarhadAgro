@@ -1,0 +1,71 @@
+# ── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# Distribution / packaging
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+MANIFEST
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Secrets / local config
+.env
+*.env.local
+
+# ── Data (raw inputs – never commit large raw data) ─────────────────────────
+data/raw/
+data/interim/
+
+# ── Test & coverage caches ───────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ── Type-checker / linter caches ─────────────────────────────────────────────
+.mypy_cache/
+.ruff_cache/
+
+# ── Frontend (Node) ───────────────────────────────────────────────────────────
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/*.local
+
+# ── Editor / OS artefacts ────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ── Explicitly TRACK the model directories needed by CI ──────────────────────
+# The top-level models/ package (models/train.py, models/__init__.py …)
+!models/
+!models/**
+
+# The cropres Python source models sub-package
+!src/
+!src/cropres/
+!src/cropres/models/
+!src/cropres/models/**
+
+# Trained-model artefacts consumed by tests (artifacts/models/*.pkl, *.txt …)
+!artifacts/
+!artifacts/models/
+!artifacts/models/**

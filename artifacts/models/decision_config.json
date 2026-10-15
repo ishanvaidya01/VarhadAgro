@@ -1,0 +1,5 @@
+{
+  "optimal_threshold": 0.21,
+  "validation_f2": 0.3717,
+  "criterion": "Maximize F2 on validation block subject to false alarm rate <= 25%"
+}

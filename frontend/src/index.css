@@ -1,0 +1,74 @@
+@import "@fontsource/newsreader/400.css";
+@import "@fontsource/newsreader/600.css";
+@import "@fontsource/newsreader/700.css";
+@import "@fontsource/ibm-plex-sans/400.css";
+@import "@fontsource/ibm-plex-sans/500.css";
+@import "@fontsource/ibm-plex-sans/600.css";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/600.css";
+
+@import "tailwindcss";
+
+:root {
+  --paper-bg: #F3EFE6;
+  --paper-surface: #FAF8F2;
+  --paper-card: #FFFFFF;
+  --ink-primary: #1B1A17;
+  --ink-secondary: #5A564F;
+  --ink-tertiary: #847F75;
+  --hairline: #D6CFBF;
+  --hairline-dark: #B8B09F;
+  --accent-teal: #1E5144;
+  --accent-teal-dark: #153B31;
+  --accent-ochre: #B86B1B;
+  
+  /* ColorBrewer sequential YlOrBr colour-blind safe ramp */
+  --risk-0: #FFFFD4;
+  --risk-1: #FED98E;
+  --risk-2: #FE9929;
+  --risk-3: #D95F0E;
+  --risk-4: #993404;
+}
+
+body {
+  background-color: var(--paper-bg);
+  color: var(--ink-primary);
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, .font-heading {
+  font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+.font-mono, code, .tabular-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Restrained transitions */
+* {
+  transition-property: background-color, border-color, color, fill, stroke, opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 120ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* Hairline rule borders */
+.border-hairline {
+  border-color: var(--hairline);
+}
+
+/* Focus ring for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--accent-teal);
+  outline-offset: 1px;
+}

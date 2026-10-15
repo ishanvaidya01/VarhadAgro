@@ -1,0 +1,158 @@
+{
+  "icrisat_dld_yield": {
+    "source_name": "ICRISAT District Level Database (DLD) for Indian Agriculture",
+    "doi": "10.21421/D2/XFB1BZ",
+    "url": "https://raw.githubusercontent.com/swapnilprasad69/Indian-Agriculture-Data-Analysis/main/ICRISAT-District%20Level%20Data.csv.zip",
+    "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "retrieval_timestamp": "2026-10-14T08:13:04.440582Z",
+    "sha256": "6817678868791506e8fb537f0de5d5a52ed7a7bd907a0cdc2adf7eaa1d549f27",
+    "years_covered": [
+      1966,
+      2017
+    ],
+    "spatial_units": "1966 District Boundaries (8 parent districts covering 11 modern Vidarbha districts)",
+    "crops": [
+      "Cotton",
+      "Soybean",
+      "Pigeonpea",
+      "Sorghum",
+      "Rice",
+      "Wheat",
+      "Chickpea"
+    ],
+    "output_files": [
+      "data/raw/icrisat_dld_maharashtra.csv",
+      "data/raw/icrisat_dld_vidarbha_raw.csv",
+      "data/interim/vidarbha_yield_panel.csv"
+    ]
+  },
+  "nasa_power_weather": {
+    "source_name": "NASA POWER Daily Agroclimatology (Point API)",
+    "provider": "NASA Langley Research Center POWER Project",
+    "parameters": [
+      "T2M",
+      "T2M_MAX",
+      "T2M_MIN",
+      "PRECTOTCORR",
+      "GWETROOT",
+      "ALLSKY_SFC_SW_DWN"
+    ],
+    "community": "AG",
+    "license": "NASA Open Data Policy (Public Domain / US Government Open Data)",
+    "retrieval_timestamp": "2026-10-14T08:15:42.835200+00:00",
+    "sha256_parquet": "de1be91381bfa93a5f7b50ca5d9dddd06575800f6416a2f944ddcadccb6a957c",
+    "date_range": [
+      "19810101",
+      "20231231"
+    ],
+    "districts": [
+      "Akola",
+      "Amravati",
+      "Bhandara",
+      "Buldhana",
+      "Chandrapur",
+      "Nagpur",
+      "Wardha",
+      "Yavatmal"
+    ],
+    "output_files": [
+      "data/raw/weather_daily_vidarbha.parquet",
+      "data/raw/weather_daily_vidarbha.csv.gz"
+    ]
+  },
+  "vidarbha_boundaries": {
+    "source_name": "Census of India District Boundaries via DataMeet / GADM",
+    "url": "https://raw.githubusercontent.com/geohacker/india/master/district/india_district.geojson",
+    "license": "Creative Commons Attribution-ShareAlike 2.0 (CC BY-SA 2.0) / ODbL",
+    "retrieval_timestamp": "2026-10-14T08:34:04.951314+00:00",
+    "sha256": "89ae710eb9dd947a168cc7f812b4d7f3099765373f461b56bb69c3dbcf6fcbad",
+    "features_count_modern": 11,
+    "features_count_1966": 8,
+    "file_size_kb": 75.9,
+    "output_files": [
+      "data/processed/vidarbha_boundaries_modern.geojson",
+      "data/processed/vidarbha_boundaries.geojson",
+      "frontend/public/vidarbha_boundaries.geojson"
+    ]
+  },
+  "feature_table": {
+    "description": "Leakage-free, season-aware features with PMFBY shortfall targets",
+    "total_rows_full": 8140,
+    "total_rows_eos": 2035,
+    "years": [
+      1981,
+      2017
+    ],
+    "cutoffs": [
+      "01-15",
+      "01-31",
+      "02-15",
+      "03-15",
+      "03-31",
+      "07-15",
+      "08-15",
+      "09-15",
+      "10-15",
+      "10-31",
+      "11-30",
+      "12-15",
+      "12-31"
+    ],
+    "crops": [
+      "Chickpea",
+      "Cotton",
+      "Pigeonpea",
+      "Rice",
+      "Sorghum",
+      "Soybean",
+      "Wheat"
+    ],
+    "districts": [
+      "Akola",
+      "Amravati",
+      "Bhandara",
+      "Buldhana",
+      "Chandrapur",
+      "Nagpur",
+      "Wardha",
+      "Yavatmal"
+    ],
+    "features": [
+      "season",
+      "area_1000ha",
+      "trend_asof",
+      "pmfby_ref_yield",
+      "pmfby_threshold_80",
+      "pmfby_threshold_70",
+      "pmfby_threshold_90",
+      "precip_total_mm",
+      "rainy_days",
+      "heavy_rain_days",
+      "longest_dry_spell",
+      "heat_days_35",
+      "heat_days_38",
+      "heat_days_40",
+      "diurnal_range",
+      "t2m_mean",
+      "tmax_mean",
+      "gdd",
+      "pet_total_mm",
+      "water_balance_mm",
+      "gwetroot_mean",
+      "gwetroot_min",
+      "precip_month_6",
+      "precip_month_7",
+      "precip_month_8",
+      "precip_month_9",
+      "precip_month_10",
+      "precip_month_11",
+      "precip_month_12",
+      "precip_month_1",
+      "precip_month_2",
+      "precip_month_3",
+      "precip_pct_normal",
+      "spi3_asof"
+    ],
+    "generated_timestamp": "2026-10-14T20:03:13.386485+00:00"
+  }
+}

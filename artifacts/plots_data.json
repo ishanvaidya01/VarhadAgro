@@ -1,0 +1,120 @@
+{
+  "calibration_curve": {
+    "prob_pred": [
+      0.1136,
+      0.2303,
+      0.4554,
+      0.6123,
+      1.0
+    ],
+    "prob_true": [
+      0.2915,
+      0.4043,
+      0.5333,
+      1.0,
+      0.5
+    ]
+  },
+  "pr_curve": {
+    "precision": [
+      0.3669,
+      0.4175,
+      0.5039,
+      0.4789,
+      0.4912,
+      0.5556,
+      1.0
+    ],
+    "recall": [
+      1.0,
+      0.6935,
+      0.3441,
+      0.1828,
+      0.1505,
+      0.0538,
+      0.0
+    ]
+  },
+  "lead_time_skill": [
+    {
+      "cutoff": "07-15",
+      "stage": "Mid-July (Sowing / Onset)",
+      "lead_days": 105,
+      "rmse": 0.4864,
+      "skill_score": 0.0306,
+      "pr_auc": 0.4256,
+      "samples": 347
+    },
+    {
+      "cutoff": "08-15",
+      "stage": "Mid-August (Vegetative / Flowering)",
+      "lead_days": 75,
+      "rmse": 0.4849,
+      "skill_score": 0.0337,
+      "pr_auc": 0.449,
+      "samples": 347
+    },
+    {
+      "cutoff": "09-15",
+      "stage": "Mid-September (Pod Fill / Bolling)",
+      "lead_days": 45,
+      "rmse": 0.4838,
+      "skill_score": 0.0359,
+      "pr_auc": 0.5324,
+      "samples": 347
+    },
+    {
+      "cutoff": "10-31",
+      "stage": "End of Season (Harvest)",
+      "lead_days": 0,
+      "rmse": 0.4873,
+      "skill_score": 0.0478,
+      "pr_auc": 0.4922,
+      "samples": 267
+    }
+  ],
+  "crop_coverage": [
+    {
+      "crop": "Chickpea",
+      "coverage": 0.875,
+      "target": 0.9,
+      "mean_width": 0.912
+    },
+    {
+      "crop": "Cotton",
+      "coverage": 0.9,
+      "target": 0.9,
+      "mean_width": 1.901
+    },
+    {
+      "crop": "Pigeonpea",
+      "coverage": 0.625,
+      "target": 0.9,
+      "mean_width": 0.769
+    },
+    {
+      "crop": "Rice",
+      "coverage": 0.745,
+      "target": 0.9,
+      "mean_width": 0.886
+    },
+    {
+      "crop": "Sorghum",
+      "coverage": 0.7,
+      "target": 0.9,
+      "mean_width": 0.948
+    },
+    {
+      "crop": "Soybean",
+      "coverage": 0.625,
+      "target": 0.9,
+      "mean_width": 1.05
+    },
+    {
+      "crop": "Wheat",
+      "coverage": 0.925,
+      "target": 0.9,
+      "mean_width": 0.752
+    }
+  ]
+}
