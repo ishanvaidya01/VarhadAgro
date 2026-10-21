@@ -38,6 +38,8 @@ htmlcov/
 .ruff_cache/
 
 # ── Frontend (Node) ───────────────────────────────────────────────────────────
+node_modules/
+/package*.json
 frontend/node_modules/
 frontend/dist/
 frontend/dist-ssr/
