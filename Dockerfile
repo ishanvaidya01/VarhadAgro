@@ -14,21 +14,16 @@ FROM python:3.12-slim
 WORKDIR /app
 
 ENV PYTHONUNBUFFERED=1 \
-  PYTHONDONTWRITEBYTECODE=1 \
-  PORT=7860 \
-  HOST=0.0.0.0
+    PYTHONDONTWRITEBYTECODE=1 \
+    PORT=5000 \
+    HOST=0.0.0.0
 
 # Install runtime dependencies for LightGBM and curl for healthchecks
 RUN apt-get update && apt-get install -y --no-install-recommends \
-  build-essential \
-  libgomp1 \
-  curl \
-  && rm -rf /var/lib/apt/lists/*
-
-# Create user with UID 1000 (standard for Hugging Face Spaces)
-RUN useradd -m -u 1000 user
-ENV HOME=/home/user \
-  PATH=/home/user/.local/bin:$PATH
+    build-essential \
+    libgomp1 \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
@@ -40,13 +35,9 @@ RUN pip install --no-cache-dir -e .
 # Copy compiled frontend assets from Stage 1 into /app/frontend/dist
 COPY --from=frontend-builder /build/frontend/dist /app/frontend/dist
 
-# Give ownership to non-root user
-RUN chown -R user:user /app
-USER user
-
-EXPOSE 7860
+EXPOSE 5000
 
 HEALTHCHECK --interval=30s --timeout=5s --start-period=15s --retries=3 \
-  CMD curl -f http://localhost:${PORT:-7860}/api/health || exit 1
+  CMD curl -f http://localhost:${PORT:-5000}/api/health || exit 1
 
-CMD ["sh", "-c", "gunicorn --bind 0.0.0.0:${PORT:-7860} --workers 2 --threads 2 --timeout 120 backend.app:app"]
+CMD ["sh", "-c", "gunicorn --bind 0.0.0.0:${PORT:-5000} --workers 2 --threads 2 --timeout 120 backend.app:app"]
