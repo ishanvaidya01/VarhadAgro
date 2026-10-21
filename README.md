@@ -1,13 +1,3 @@
----
-title: VarhadCrop
-emoji: 🌾
-colorFrom: green
-colorTo: yellow
-sdk: docker
-app_port: 7860
----
-
-
 # VarhadCrop
 
 District-level crop shortfall risk, calibrated uncertainty, and climate stress-testing for Vidarbha, Maharashtra. Built on 52 years of observed government yield statistics and 43 years of daily agroclimatology, with uncertainty calibrated on held-out years.

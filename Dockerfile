@@ -44,9 +44,9 @@ COPY --from=frontend-builder /build/frontend/dist /app/frontend/dist
 RUN chown -R user:user /app
 USER user
 
-EXPOSE 10000 7860 5000
+EXPOSE 7860
 
 HEALTHCHECK --interval=30s --timeout=5s --start-period=15s --retries=3 \
-  CMD curl -f http://localhost:${PORT:-10000}/api/health || exit 1
+  CMD curl -f http://localhost:${PORT:-7860}/api/health || exit 1
 
-CMD ["sh", "-c", "gunicorn --bind 0.0.0.0:${PORT:-10000} --workers 2 --threads 2 --timeout 120 backend.app:app"]
+CMD ["sh", "-c", "gunicorn --bind 0.0.0.0:${PORT:-7860} --workers 2 --threads 2 --timeout 120 backend.app:app"]
