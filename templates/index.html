@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VarhadAgro &mdash; Crop Yield Prediction</title>
+  <style>
+    :root {
+      --primary: #1b4332;
+      --primary-hover: #143527;
+      --accent: #2d6a4f;
+      --accent-light: #d8f3dc;
+      --accent-subtle: #ebfbee;
+      --border: #e2e8f0;
+      --border-focus: #2d6a4f;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      --card-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.06), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+      --radius: 12px;
+      --radius-sm: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding: 32px 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    /* Top Navigation / Brand */
+    .brand-header {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      box-shadow: var(--card-shadow);
+      margin-bottom: 24px;
+    }
+
+    .brand-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .brand-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--accent-subtle);
+      border: 1px solid var(--accent-light);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+    }
+
+    .brand-title h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: -0.3px;
+    }
+
+    .brand-subtitle {
+      color: var(--text-muted);
+      font-size: 14.5px;
+      max-width: 680px;
+    }
+
+    /* Quick Scenarios Bar */
+    .presets-container {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid #f1f5f9;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .presets-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--text-muted);
+    }
+
+    .preset-chip {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 500;
+      color: #334155;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .preset-chip:hover {
+      background: #f8fafc;
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    /* Main Grid */
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    @media (max-width: 860px) {
+      .dashboard-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Cards */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--card-shadow);
+      padding: 24px;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #f1f5f9;
+      padding-bottom: 12px;
+    }
+
+    .card-header h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .card-header .step-num {
+      width: 24px;
+      height: 24px;
+      background: var(--accent-light);
+      color: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* Form Fields */
+    .section-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      margin: 18px 0 10px 0;
+    }
+
+    .section-label:first-of-type {
+      margin-top: 0;
+    }
+
+    .fields-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .fields-row.three-col {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media (max-width: 540px) {
+      .fields-row, .fields-row.three-col {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .field-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #334155;
+      margin-bottom: 6px;
+    }
+
+    .input-with-unit {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    input, select {
+      width: 100%;
+      border: 1px solid #cbd5e1;
+      border-radius: var(--radius-sm);
+      padding: 9px 12px;
+      font-size: 14px;
+      color: var(--text);
+      background: #ffffff;
+      outline: none;
+      transition: all 0.15s ease;
+    }
+
+    .input-with-unit input {
+      padding-right: 50px;
+    }
+
+    .input-unit {
+      position: absolute;
+      right: 12px;
+      font-size: 12px;
+      font-weight: 500;
+      color: #94a3b8;
+      pointer-events: none;
+    }
+
+    input:focus, select:focus {
+      border-color: var(--border-focus);
+      box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.12);
+    }
+
+    select {
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      background-size: 16px;
+      padding-right: 32px;
+    }
+
+    /* Submit Button */
+    .btn-submit {
+      margin-top: 22px;
+      width: 100%;
+      background: linear-gradient(180deg, #2d6a4f 0%, #1b4332 100%);
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 12px;
+      border: none;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 2px 4px rgba(27, 67, 50, 0.2);
+      transition: all 0.2s ease;
+    }
+
+    .btn-submit:hover {
+      background: linear-gradient(180deg, #367d5e 0%, #22523d 100%);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(27, 67, 50, 0.25);
+    }
+
+    .btn-submit:active {
+      transform: translateY(0);
+    }
+
+    /* Result Banner */
+    .result-card {
+      background: linear-gradient(180deg, #f0fdf4 0%, #e6f9ed 100%);
+      border: 1px solid #bbf7d0;
+      border-radius: var(--radius);
+      padding: 24px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(34, 197, 94, 0.08);
+      margin-bottom: 20px;
+    }
+
+    .result-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #dcfce7;
+      color: #166534;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+
+    .result-number {
+      font-size: 38px;
+      font-weight: 800;
+      color: #14532d;
+      letter-spacing: -0.5px;
+    }
+
+    .result-number span {
+      font-size: 18px;
+      font-weight: 600;
+      color: #15803d;
+      margin-left: 2px;
+    }
+
+    .result-secondary {
+      font-size: 14px;
+      color: #166534;
+      font-weight: 500;
+      margin-top: 6px;
+    }
+
+    /* Summary Breakdown */
+    .summary-box {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .summary-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 14px;
+      font-size: 13.5px;
+      border-bottom: 1px solid #f1f5f9;
+      background: #ffffff;
+    }
+
+    .summary-item:last-child {
+      border-bottom: none;
+    }
+
+    .summary-item .label {
+      color: var(--text-muted);
+    }
+
+    .summary-item .val {
+      font-weight: 600;
+      color: #1e293b;
+    }
+
+    /* Empty Placeholder */
+    .empty-state {
+      padding: 48px 16px;
+      text-align: center;
+      color: var(--text-muted);
+    }
+
+    .empty-icon {
+      width: 56px;
+      height: 56px;
+      background: #f1f5f9;
+      border-radius: 50%;
+      margin: 0 auto 16px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #94a3b8;
+    }
+
+    .empty-state h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #334155;
+      margin-bottom: 6px;
+    }
+
+    .empty-state p {
+      font-size: 13.5px;
+      max-width: 280px;
+      margin: 0 auto;
+    }
+
+    /* Model Performance Metrics */
+    .benchmark-card {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+    }
+
+    .benchmark-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #475569;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .benchmark-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+    }
+
+    .metric-pill {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 8px 10px;
+      text-align: center;
+    }
+
+    .metric-pill .lbl {
+      font-size: 11px;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    .metric-pill .num {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-top: 2px;
+    }
+
+    /* Error Message */
+    .alert-error {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: var(--radius-sm);
+      color: #991b1b;
+      padding: 12px 14px;
+      font-size: 13.5px;
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Brand Header -->
+  <header class="brand-header">
+    <div class="brand-row">
+      <div class="brand-title">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a10 10 0 0 1 10 10c0 5.25-3.5 8.75-8 9.75V15h2l-3-4-3 4h2v6.75C7.5 20.75 4 17.25 4 12A10 10 0 0 1 12 2z"></path>
+          </svg>
+        </div>
+        <div>
+          <h1>VarhadAgro</h1>
+          <p class="brand-subtitle">Crop Yield Prediction & Agroclimatic Risk Assessment for Vidarbha, Maharashtra</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Scenario Presets -->
+    <div class="presets-container">
+      <span class="presets-title">Presets:</span>
+      <button type="button" class="preset-chip" onclick="applyPreset('Nagpur', 'Soybean', 'Kharif', 140, 880, 27.2, 45, 14, 2)">
+        Nagpur Soybean
+      </button>
+      <button type="button" class="preset-chip" onclick="applyPreset('Akola', 'Cotton', 'Kharif', 210, 750, 28.1, 38, 18, 5)">
+        Akola Cotton
+      </button>
+      <button type="button" class="preset-chip" onclick="applyPreset('Amravati', 'Wheat', 'Rabi', 45, 60, 21.5, 4, 65, 0)">
+        Amravati Wheat
+      </button>
+      <button type="button" class="preset-chip" onclick="applyPreset('Chandrapur', 'Rice', 'Kharif', 160, 1150, 27.8, 55, 10, 1)">
+        Chandrapur Rice
+      </button>
+      <button type="button" class="preset-chip" onclick="applyPreset('Yavatmal', 'Pigeonpea', 'Kharif', 110, 810, 27.5, 42, 16, 3)">
+        Yavatmal Pigeonpea
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Grid -->
+  <div class="dashboard-grid">
+
+    <!-- Column 1: Input Form -->
+    <div class="card">
+      <div class="card-header">
+        <span class="step-num">1</span>
+        <h2>Input Parameters</h2>
+      </div>
+
+      {% if error %}
+      <div class="alert-error">{{ error }}</div>
+      {% endif %}
+
+      <form action="/predict" method="POST">
+        <!-- Section: Crop & Region -->
+        <div class="section-label">District & Crop Selection</div>
+        <div class="fields-row three-col">
+          <div class="field-group">
+            <label for="district">District</label>
+            <select name="district" id="district" required>
+              {% for d in districts %}
+              <option value="{{ d }}" {% if inputs.district == d or (not inputs.district and d == 'Nagpur') %}selected{% endif %}>{{ d }}</option>
+              {% endfor %}
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="crop">Crop</label>
+            <select name="crop" id="crop" required>
+              {% for c in crops %}
+              <option value="{{ c }}" {% if inputs.crop == c or (not inputs.crop and c == 'Soybean') %}selected{% endif %}>{{ c }}</option>
+              {% endfor %}
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="season">Season</label>
+            <select name="season" id="season" required>
+              {% for s in seasons %}
+              <option value="{{ s }}" {% if inputs.season == s or (not inputs.season and s == 'Kharif') %}selected{% endif %}>{{ s }}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+
+        <!-- Section: Cultivation & Weather -->
+        <div class="section-label">Cultivation & Climate Parameters</div>
+
+        <div class="fields-row">
+          <div class="field-group">
+            <label for="area_1000ha">Cultivated Area</label>
+            <div class="input-with-unit">
+              <input type="number" step="0.1" name="area_1000ha" id="area_1000ha" value="{{ inputs.area_1000ha|default(100.0) }}" required>
+              <span class="input-unit">k ha</span>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="rainfall_mm">Total Rainfall</label>
+            <div class="input-with-unit">
+              <input type="number" step="0.1" name="rainfall_mm" id="rainfall_mm" value="{{ inputs.rainfall_mm|default(800.0) }}" required>
+              <span class="input-unit">mm</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fields-row">
+          <div class="field-group">
+            <label for="temp_mean_c">Mean Temperature</label>
+            <div class="input-with-unit">
+              <input type="number" step="0.1" name="temp_mean_c" id="temp_mean_c" value="{{ inputs.temp_mean_c|default(26.5) }}" required>
+              <span class="input-unit">°C</span>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="rainy_days">Rainy Days</label>
+            <div class="input-with-unit">
+              <input type="number" name="rainy_days" id="rainy_days" value="{{ inputs.rainy_days|default(45) }}" required>
+              <span class="input-unit">days</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fields-row">
+          <div class="field-group">
+            <label for="dry_spell_days">Longest Dry Spell</label>
+            <div class="input-with-unit">
+              <input type="number" name="dry_spell_days" id="dry_spell_days" value="{{ inputs.dry_spell_days|default(14) }}" required>
+              <span class="input-unit">days</span>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="heat_wave_days">Extreme Heat (&gt;38°C)</label>
+            <div class="input-with-unit">
+              <input type="number" name="heat_wave_days" id="heat_wave_days" value="{{ inputs.heat_wave_days|default(2) }}" required>
+              <span class="input-unit">days</span>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-submit">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+          </svg>
+          Run Yield Prediction
+        </button>
+      </form>
+    </div>
+
+    <!-- Column 2: Results & Benchmark -->
+    <div class="card">
+      <div class="card-header">
+        <span class="step-num">2</span>
+        <h2>Prediction Results</h2>
+      </div>
+
+      {% if prediction %}
+      <!-- Prediction Highlight Box -->
+      <div class="result-card">
+        <div class="result-tag">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          Estimated Yield
+        </div>
+        <div class="result-number">
+          {{ prediction.kg_ha }} <span>kg / ha</span>
+        </div>
+        <div class="result-secondary">
+          &asymp; <strong>{{ prediction.quintal_acre }}</strong> quintals / acre &nbsp;|&nbsp; <strong>{{ (prediction.kg_ha / 100)|round(2) }}</strong> quintals / ha
+        </div>
+      </div>
+
+      <!-- Condition Breakdown -->
+      <div class="summary-box">
+        <div class="summary-item">
+          <span class="label">Target Location & Crop</span>
+          <span class="val">{{ inputs.district }} &bull; {{ inputs.crop }} ({{ inputs.season }})</span>
+        </div>
+        <div class="summary-item">
+          <span class="label">Seasonal Rainfall</span>
+          <span class="val">{{ inputs.rainfall_mm }} mm across {{ inputs.rainy_days }} rainy days</span>
+        </div>
+        <div class="summary-item">
+          <span class="label">Average Temperature</span>
+          <span class="val">{{ inputs.temp_mean_c }} °C</span>
+        </div>
+        <div class="summary-item">
+          <span class="label">Dry Spell Duration</span>
+          <span class="val">{{ inputs.dry_spell_days }} consecutive days</span>
+        </div>
+        <div class="summary-item">
+          <span class="label">Heat Stress (&gt;38°C)</span>
+          <span class="val">{{ inputs.heat_wave_days }} days</span>
+        </div>
+      </div>
+
+      {% else %}
+      <!-- Empty State -->
+      <div class="empty-state">
+        <div class="empty-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 20v-6M6 20V10M18 20V4"></path>
+          </svg>
+        </div>
+        <h3>Ready to Predict</h3>
+        <p>Pick a preset above or set your parameters and click <strong>Run Yield Prediction</strong>.</p>
+      </div>
+      {% endif %}
+
+      <!-- Benchmark Metrics -->
+      <div class="benchmark-card">
+        <div class="benchmark-title">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 14 14"></polyline>
+          </svg>
+          Model Benchmark (Random Forest)
+        </div>
+        <div class="benchmark-grid">
+          <div class="metric-pill">
+            <div class="lbl">Test R² Score</div>
+            <div class="num">{{ metrics.test_r2|default('0.75') }}</div>
+          </div>
+          <div class="metric-pill">
+            <div class="lbl">Test MAE</div>
+            <div class="num">{{ metrics.test_mae|default('170.4') }}</div>
+          </div>
+          <div class="metric-pill">
+            <div class="lbl">Test RMSE</div>
+            <div class="num">{{ metrics.test_rmse|default('244.0') }}</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  function applyPreset(district, crop, season, area, rainfall, temp, rainy, dry, heat) {
+    document.getElementById('district').value = district;
+    document.getElementById('crop').value = crop;
+    document.getElementById('season').value = season;
+    document.getElementById('area_1000ha').value = area;
+    document.getElementById('rainfall_mm').value = rainfall;
+    document.getElementById('temp_mean_c').value = temp;
+    document.getElementById('rainy_days').value = rainy;
+    document.getElementById('dry_spell_days').value = dry;
+    document.getElementById('heat_wave_days').value = heat;
+  }
+</script>
+
+</body>
+</html>

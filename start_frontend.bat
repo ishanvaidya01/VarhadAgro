@@ -1,6 +1,0 @@
-@echo off
-title VarhadCrop Frontend
-echo Starting VarhadCrop Frontend on http://localhost:5173 ...
-cd frontend
-npm run dev
-pause

@@ -1,71 +1,20 @@
-# ── Python ──────────────────────────────────────────────────────────────────
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
-*.pyo
-*.pyd
+*.so
 
-# Distribution / packaging
-*.egg-info/
-*.egg
-dist/
-build/
-.eggs/
-MANIFEST
-
-# Virtual environments
+# Environments
 venv/
-.venv/
 env/
-.env/
-
-# Secrets / local config
 .env
-*.env.local
 
-# ── Data (raw inputs – never commit large raw data) ─────────────────────────
-data/raw/
-data/interim/
-
-# ── Test & coverage caches ───────────────────────────────────────────────────
+# Models & Large data caches
+*.pkl.bak
 .pytest_cache/
-.coverage
-htmlcov/
-.tox/
 
-# ── Type-checker / linter caches ─────────────────────────────────────────────
-.mypy_cache/
-.ruff_cache/
-
-# ── Frontend (Node) ───────────────────────────────────────────────────────────
-frontend/node_modules/
-frontend/dist/
-frontend/dist-ssr/
-frontend/*.local
-
-# ── Editor / OS artefacts ────────────────────────────────────────────────────
+# OS and IDE files
 .DS_Store
 Thumbs.db
-.idea/
 .vscode/
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-
-
-# The cropres Python source models sub-package
-!src/
-!src/cropres/
-!src/cropres/models/
-!src/cropres/models/**
-
-# Trained-model artefacts consumed by tests (artifacts/models/*.pkl, *.txt …)
-!artifacts/
-!artifacts/models/
-!artifacts/models/**
-
-# Re-ignore pycache inside unignored source folders
-**/__pycache__/
-*.py[cod]
+.idea/
