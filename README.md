@@ -67,6 +67,20 @@ python app.py
 
 Open your browser and navigate to `http://localhost:5000`. You can test sample presets with one click (e.g. *Nagpur Soybean*, *Akola Cotton*) or enter custom weather values to see yield predictions.
 
+### 4. Run with Docker
+
+Build and run the Docker container:
+
+```bash
+# Build the Docker image
+docker build -t varhadagro .
+
+# Run the container
+docker run -p 5000:5000 varhadagro
+```
+
+The web application will be accessible at `http://localhost:5000`.
+
 ## API Usage
 
 The application also exposes a JSON endpoint for predictions at `/predict`:
