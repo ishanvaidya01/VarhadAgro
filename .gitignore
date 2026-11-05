@@ -7,7 +7,6 @@ __pycache__/
 # Environments
 venv/
 env/
-.env
 
 # Models & Large data caches
 *.pkl.bak
@@ -16,5 +15,6 @@ env/
 # OS and IDE files
 .DS_Store
 Thumbs.db
-.vscode/
 .idea/
+config.bat
+node_modules

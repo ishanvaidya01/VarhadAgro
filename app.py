@@ -1,3 +1,4 @@
+import utils.session
 import os
 from flask import Flask, render_template, request, jsonify
 from model import CropYieldModel
