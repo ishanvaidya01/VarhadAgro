@@ -1,10 +1,23 @@
-# VarhadAgro - Crop Yield Prediction
+<div align="center">
 
-A simple machine learning project to predict crop yields for districts across Vidarbha, Maharashtra based on seasonal weather conditions and cultivated area.
+# VarhadAgro — Crop Yield Prediction
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Flask](https://img.shields.io/badge/Flask-3.x-000000?logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-1.4-F7931E?logo=scikitlearn&logoColor=white)](https://scikit-learn.org/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+
+</div>
+
+A machine learning project to predict crop yields for districts across Vidarbha, Maharashtra based on seasonal weather conditions and cultivated area.
+Data Collected from :
+ICRISAT District Level Database (DLD) and Directorate of Economics and Statistics (DES), Ministry of Agriculture & Farmers Welfare, Government of India.
 
 ## Overview
 
 The model estimates crop yield in **kg/hectare** (and equivalent **quintals/acre**) using historical agricultural and meteorological observations.
+
 
 - **Districts:** Akola, Amravati, Bhandara, Buldhana, Chandrapur, Nagpur, Wardha, Yavatmal
 - **Crops:** Chickpea, Cotton, Pigeonpea, Rice, Sorghum, Soybean, Wheat
@@ -120,6 +133,22 @@ Response:
   }
 }
 ```
+
+## Contributing
+
+Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) before opening a pull request.
+
+1. Fork the repository and create a branch: `feat/short-description` or `fix/short-description`.
+2. Keep changes focused and re-run `python train.py` to confirm the reported metrics still hold.
+3. Describe the change and how you verified it in the pull request.
+
+## Security
+
+Report vulnerabilities privately — see [SECURITY.md](SECURITY.md).
+
+## Contact
+
+Maintainer: **Ishan Vaidya** — [ishan.vaidya01@gmail.com](mailto:ishan.vaidya01@gmail.com)
 
 ## License
 
